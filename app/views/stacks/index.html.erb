@@ -1,0 +1,26 @@
+
+<h1>Hot Stacks</h1>
+
+<br>
+
+<%= link_to 'New Stack', new_stack_path %>
+
+<br>
+
+
+
+<% @stack_trends.each do |trend|%>
+<div>
+
+  <%for i in 0..8%>
+
+    <% if trend.type_id =="#{i}"%>
+    <%= trend.type_name%>
+    <%= trend.stack_name %>
+    <% end %>
+
+    <% i += 1 %>
+</div>
+  <%end %>
+
+<% end %>
